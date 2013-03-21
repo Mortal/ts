@@ -67,9 +67,9 @@ namespace civilians_and_killers {
 
 	public:
 		friend std::ostream & operator<<(std::ostream & os, state & s) {
-			return os << (3-s.civilians) << "-" << s.civilians
+			return os << (3-s.civilians) << "+" << (3-s.killers)
 				<< ((s.boat == LEFT) ? " < " : " > ")
-				<< (3-s.killers) << "-" << s.killers << "";
+				<< s.civilians << "+" << s.killers << "";
 		}
 
 	private:
